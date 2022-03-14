@@ -1,10 +1,10 @@
-struct ListNode* reverseList(struct ListNode* head){
-    ListNode*cur=NULL;
-    ListNode*pre=head;
+struct ListNode* reverseList(struct ListNode* head){//利用双指针实现局部调换，循环过程直到链尾
+    ListNode*cur=NULL; //定义指针cur在后
+    ListNode*pre=head;//定义指针pre在前
     while(pre!=NULL){
-        ListNode*t=pre->next;
-        cur=pre;
-        pre=t;
+        ListNode*t=pre->next;//存储下一结点位置
+        cur=pre;//反转
+        pre=t;//指针向前移动
         }
         return cur;
 }
